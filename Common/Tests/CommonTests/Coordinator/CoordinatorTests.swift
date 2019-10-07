@@ -21,9 +21,7 @@ final class CoordinatorTests: XCTestCase {
     }
 
     func test_should_start_when_a_subclass() {
-        final class TestCoordinator: Coordinator { }
-
-        let coordinator = TestCoordinator()
+        let coordinator = FakeCoordinator()
         coordinator.start()
     }
 
@@ -32,7 +30,6 @@ final class CoordinatorTests: XCTestCase {
 
         let child = FakeCoordinator()
         coordinator.add(child: child)
-
 
         XCTAssertEqual(coordinator.childCoordinators.count, previousNumberOfChildren + 1)
         XCTAssert(coordinator.childCoordinators.contains(where: { $0 === child }))
@@ -44,7 +41,6 @@ final class CoordinatorTests: XCTestCase {
         let child = FakeCoordinator()
         coordinator.add(child: child)
         coordinator.add(child: child)
-
 
         XCTAssertEqual(coordinator.childCoordinators.count, previousNumberOfChildren + 1)
     }
@@ -69,5 +65,5 @@ final class CoordinatorTests: XCTestCase {
     }
 }
 
-// MARK - Fake coordinator
+// MARK: - Fake coordinator
 private final class FakeCoordinator: Coordinator { }
