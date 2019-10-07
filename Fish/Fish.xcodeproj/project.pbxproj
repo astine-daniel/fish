@@ -12,7 +12,6 @@
 		D20CD567234A810E001CC9B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD566234A810E001CC9B5 /* AppDelegate.swift */; };
 		D20CD569234A810E001CC9B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD568234A810E001CC9B5 /* SceneDelegate.swift */; };
 		D20CD56B234A810E001CC9B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD56A234A810E001CC9B5 /* ViewController.swift */; };
-		D20CD56E234A810E001CC9B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20CD56C234A810E001CC9B5 /* Main.storyboard */; };
 		D20CD570234A8110001CC9B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D20CD56F234A8110001CC9B5 /* Assets.xcassets */; };
 		D20CD573234A8110001CC9B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20CD571234A8110001CC9B5 /* LaunchScreen.storyboard */; };
 		D20CD57E234A8111001CC9B5 /* FishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD57D234A8111001CC9B5 /* FishTests.swift */; };
@@ -49,7 +48,6 @@
 		D20CD566234A810E001CC9B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D20CD568234A810E001CC9B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D20CD56A234A810E001CC9B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D20CD56D234A810E001CC9B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D20CD56F234A8110001CC9B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D20CD572234A8110001CC9B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D20CD574234A8110001CC9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 				D20CD566234A810E001CC9B5 /* AppDelegate.swift */,
 				D20CD568234A810E001CC9B5 /* SceneDelegate.swift */,
 				D20CD56A234A810E001CC9B5 /* ViewController.swift */,
-				D20CD56C234A810E001CC9B5 /* Main.storyboard */,
 				D20CD56F234A8110001CC9B5 /* Assets.xcassets */,
 				D20CD571234A8110001CC9B5 /* LaunchScreen.storyboard */,
 				D20CD574234A8110001CC9B5 /* Info.plist */,
@@ -281,7 +278,6 @@
 			files = (
 				D20CD573234A8110001CC9B5 /* LaunchScreen.storyboard in Resources */,
 				D20CD570234A8110001CC9B5 /* Assets.xcassets in Resources */,
-				D20CD56E234A810E001CC9B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,14 +463,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D20CD56C234A810E001CC9B5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D20CD56D234A810E001CC9B5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D20CD571234A8110001CC9B5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -536,13 +524,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=500 -Xfrontend -warn-long-expression-type-checking=500";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -590,12 +580,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -613,7 +604,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.astine.Fish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -631,7 +621,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.astine.Fish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -652,7 +641,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.astine.FishTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fish.app/Fish";
 			};
@@ -674,7 +662,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.astine.FishTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fish.app/Fish";
 			};
@@ -694,7 +681,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.astine.FishUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Fish;
 			};
@@ -714,7 +700,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.astine.FishUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Fish;
 			};
