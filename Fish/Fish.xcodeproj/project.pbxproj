@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		D20CD573234A8110001CC9B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20CD571234A8110001CC9B5 /* LaunchScreen.storyboard */; };
 		D20CD57E234A8111001CC9B5 /* FishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD57D234A8111001CC9B5 /* FishTests.swift */; };
 		D20CD589234A8111001CC9B5 /* FishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD588234A8111001CC9B5 /* FishUITests.swift */; };
+		D2A52245234ABF8000109D9D /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = D2A52244234ABF8000109D9D /* Common */; };
 		E2E18E7888A6972FB68EFDD7 /* libPods-FishTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6002B2730469B3B9A606C3D2 /* libPods-FishTests.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				364472B04CF72AE2650FD392 /* libPods-default-Fish.a in Frameworks */,
+				D2A52245234ABF8000109D9D /* Common in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +186,9 @@
 			dependencies = (
 			);
 			name = Fish;
+			packageProductDependencies = (
+				D2A52244234ABF8000109D9D /* Common */,
+			);
 			productName = Fish;
 			productReference = D20CD563234A810E001CC9B5 /* Fish.app */;
 			productType = "com.apple.product-type.application";
@@ -196,7 +201,6 @@
 				D20CD575234A8111001CC9B5 /* Sources */,
 				D20CD576234A8111001CC9B5 /* Frameworks */,
 				D20CD577234A8111001CC9B5 /* Resources */,
-				D20CD59B234A83B1001CC9B5 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -216,7 +220,6 @@
 				D20CD580234A8111001CC9B5 /* Sources */,
 				D20CD581234A8111001CC9B5 /* Frameworks */,
 				D20CD582234A8111001CC9B5 /* Resources */,
-				D20CD59C234A83C0001CC9B5 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -380,43 +383,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n  ${PODS_ROOT}/SwiftLint/swiftlint lint --config ../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, install using cocoapods - 'bundle exec pod install'\"\nfi\n";
-		};
-		D20CD59B234A83B1001CC9B5 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n  ${PODS_ROOT}/SwiftLint/swiftlint lint --config ../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, install using cocoapods - 'bundle exec pod install'\"\nfi\n";
-		};
-		D20CD59C234A83C0001CC9B5 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n  ${PODS_ROOT}/SwiftLint/swiftlint lint --config ../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, install using cocoapods - 'bundle exec pod install'\"\nfi\n";
+			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n  ${PODS_ROOT}/SwiftLint/swiftlint lint --config ../.swiftlint.yml ../Common\n  ${PODS_ROOT}/SwiftLint/swiftlint lint --config ../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, install using cocoapods - 'bundle exec pod install'\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -745,6 +712,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D2A52244234ABF8000109D9D /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Common;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D20CD55B234A810E001CC9B5 /* Project object */;
 }
