@@ -22,7 +22,7 @@ final class ScreenPresenterTests: XCTestCase {
 
     func test_should_set_module_as_root() throws {
         let module = MockPresentable()
-    
+
         sut.setRoot(module, animated: true)
 
         let (presentedScreen, presentedStyle) = try XCTUnwrap(screenMock.screenPresentedWithStyle)
@@ -48,7 +48,7 @@ final class ScreenPresenterTests: XCTestCase {
         sut.dismiss(module, animated: true)
 
         let didDismissModuleAnimated = try XCTUnwrap(screenMock.didDismissAnimated)
-        XCTAssertEqual(didDismissModuleAnimated, true)
+        XCTAssertTrue(didDismissModuleAnimated)
     }
 }
 
