@@ -1,3 +1,5 @@
+#if canImport(UIKit)
+
 import UIKit
 
 public final class NavigationControllerPresenter: NSObject {
@@ -6,15 +8,20 @@ public final class NavigationControllerPresenter: NSObject {
     // MARK: - Properties
     private (set) var navigationScreen: NavigationScreen
 
+    private var completionsWhenPopped: [UIViewController: Completion]
     private var completions: [UIViewController: Completion]
+
     private weak var snapshotView: UIView?
 
     // MARK: - Initialization
     public required init(navigationScreen: NavigationScreen) {
         self.navigationScreen = navigationScreen
+        completionsWhenPopped = [:]
         completions = [:]
 
         super.init()
+
+        navigationScreen.delegate = self
     }
 }
 
@@ -23,22 +30,22 @@ extension NavigationControllerPresenter: NavigationPresenterProtocol {
     public var rootScreen: ScreenProtocol { navigationScreen }
 
     public func setRoot(_ module: Module, animated: Bool) {
-        completions.forEach { $0.value() }
-        completions.removeAll()
+        completionsWhenPopped.forEach { $0.value() }
+        completionsWhenPopped.removeAll()
 
         let module = module.toPresent()
         navigationScreen.present(module, style: .main(animated: animated))
     }
 
-    public func show(_ module: Module, animated: Bool, completion: Completion?) {
+    public func show(_ module: Module, animated: Bool, completionWhenPopped: Completion?) {
         guard navigationScreen.viewControllers.isEmpty == false else {
             setRoot(module, animated: animated)
             return
         }
 
         guard let viewController = module.toPresent() as? (UIViewController & ScreenProtocol) else { return }
-        if let completion = completion {
-            completions[viewController] = completion
+        if let completionWhenPopped = completionWhenPopped {
+            completionsWhenPopped[viewController] = completionWhenPopped
         }
 
         navigationScreen.present(viewController, style: .show(animated: animated))
@@ -77,6 +84,8 @@ extension NavigationControllerPresenter: UINavigationControllerDelegate {
     public func navigationController(_ navigationController: UINavigationController,
                                      didShow viewController: UIViewController,
                                      animated: Bool) {
+        runCompletion(for: viewController)
+
         guard let poppedViewController = navigationController
             .transitionCoordinator?.viewController(forKey: .from) else {
                 return
@@ -84,12 +93,17 @@ extension NavigationControllerPresenter: UINavigationControllerDelegate {
 
         guard navigationController.viewControllers.contains(poppedViewController) == false else { return }
 
-        runCompletion(for: poppedViewController)
+        runCompletionWhenPopped(for: poppedViewController)
     }
 }
 
 // MARK: - Private extension
 private extension NavigationControllerPresenter {
+    func runCompletionWhenPopped(for viewController: UIViewController) {
+        guard let completion = completionsWhenPopped.removeValue(forKey: viewController) else { return }
+        completion()
+    }
+
     func runCompletion(for viewController: UIViewController) {
         guard let completion = completions.removeValue(forKey: viewController) else { return }
         completion()
@@ -104,10 +118,10 @@ private extension NavigationControllerPresenter {
 
         switch animation {
         case .none:
-            completions[navigationScreen.visibleViewController!] = customCompletion
+            completions[viewController] = customCompletion
             backTo(viewController: viewController, animated: false)
         case .normal:
-            completions[navigationScreen.visibleViewController!] = customCompletion
+            completions[viewController] = customCompletion
             backTo(viewController: viewController)
         case .fade:
             customCompletion = { [weak self] in
@@ -117,7 +131,7 @@ private extension NavigationControllerPresenter {
                 completion?()
             }
 
-            completions[navigationScreen.visibleViewController!] = customCompletion
+            completions[viewController] = customCompletion
             fadeTo(viewController: viewController)
         }
     }
@@ -135,7 +149,7 @@ private extension NavigationControllerPresenter {
                 return
         }
 
-        poppedViewControllers.forEach { runCompletion(for: $0) }
+        poppedViewControllers.forEach { runCompletionWhenPopped(for: $0) }
     }
 
     func fadeTo(viewController: UIViewController) {
@@ -158,3 +172,5 @@ private extension NavigationControllerPresenter {
         })
     }
 }
+
+#endif
