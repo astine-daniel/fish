@@ -49,8 +49,8 @@ private extension UIWindow {
 }
 
 // MARK: - UIViewController
-extension ScreenProtocol where Self: UIViewController {
-    public func present(_ screen: ScreenProtocol, style: ScreenPresentStyle) {
+public extension ScreenProtocol where Self: UIViewController {
+    func present(_ screen: ScreenProtocol, style: ScreenPresentStyle) {
         guard let viewController = screen as? UIViewController else { return }
 
         switch style {
@@ -62,14 +62,14 @@ extension ScreenProtocol where Self: UIViewController {
         }
     }
 
-    public func dismiss(animated: Bool) {
+    func dismiss(animated: Bool) {
         dismiss(animated: animated)
     }
 }
 
 // MARK: - UINavigationController
-extension ScreenProtocol where Self: UINavigationController {
-    public func present(_ screen: ScreenProtocol, style: ScreenPresentStyle) {
+public extension ScreenProtocol where Self: UINavigationController {
+    func present(_ screen: ScreenProtocol, style: ScreenPresentStyle) {
         guard let viewController = screen as? UIViewController else { return }
 
         switch style {
@@ -82,7 +82,7 @@ extension ScreenProtocol where Self: UINavigationController {
         }
     }
 
-    public func dismiss(animated: Bool) {
+    func dismiss(animated: Bool) {
         visibleViewController?.dismiss(animated: true)
     }
 }
