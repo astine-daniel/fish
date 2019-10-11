@@ -87,6 +87,26 @@ public extension ScreenProtocol where Self: UINavigationController {
     }
 }
 
+// MARK: - UITabBarController
+public extension ScreenProtocol where Self: UITabBarController {
+    func present(_ screen: ScreenProtocol, style: ScreenPresentStyle) {
+        guard let viewController = screen as? UIViewController else { return }
+
+        switch style {
+        case let .main(animated):
+            setViewControllers([viewController], animated: animated)
+            selectedViewController = viewController
+        case let .modal(animated),
+             let .show(animated):
+            selectedViewController?.present(viewController, animated: animated)
+        }
+    }
+
+    func dismiss(animated: Bool) {
+        selectedViewController?.dismiss(animated: true)
+    }
+}
+
 extension UIViewController: ScreenProtocol { }
 
 #endif
