@@ -1,3 +1,3 @@
-public protocol Presentable {
+public protocol Presentable: AnyObject {
     func toPresent() -> ScreenProtocol
 }

@@ -6,7 +6,7 @@ open class Coordinator {
     public init() { }
 
     // MARK: - Methods
-    public func start() {
+    open func start() {
         guard type(of: self) != Coordinator.self else {
             fatalError("Method must be overridden")
         }

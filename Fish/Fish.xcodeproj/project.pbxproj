@@ -17,6 +17,12 @@
 		D20CD57E234A8111001CC9B5 /* FishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD57D234A8111001CC9B5 /* FishTests.swift */; };
 		D20CD589234A8111001CC9B5 /* FishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD588234A8111001CC9B5 /* FishUITests.swift */; };
 		D2A52245234ABF8000109D9D /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = D2A52244234ABF8000109D9D /* Common */; };
+		D2BF64DE235030D400A85E70 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF64DD235030D400A85E70 /* ApplicationCoordinator.swift */; };
+		D2BF64E32350349500A85E70 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF64E22350349500A85E70 /* CoordinatorFactory.swift */; };
+		D2BF64FC2352646400A85E70 /* ApplicationCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF64FB2352646400A85E70 /* ApplicationCoordinatorTests.swift */; };
+		D2BF64FF235267BB00A85E70 /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF64FE235267BB00A85E70 /* HomeCoordinatorProtocol.swift */; };
+		D2BF6501235267DA00A85E70 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF6500235267DA00A85E70 /* HomeCoordinator.swift */; };
+		D2BF6503235268F700A85E70 /* HomeCoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF6502235268F700A85E70 /* HomeCoordinatorFactoryProtocol.swift */; };
 		E2E18E7888A6972FB68EFDD7 /* libPods-FishTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6002B2730469B3B9A606C3D2 /* libPods-FishTests.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +64,12 @@
 		D20CD584234A8111001CC9B5 /* FishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20CD588234A8111001CC9B5 /* FishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishUITests.swift; sourceTree = "<group>"; };
 		D20CD58A234A8111001CC9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2BF64DD235030D400A85E70 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		D2BF64E22350349500A85E70 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		D2BF64FB2352646400A85E70 /* ApplicationCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinatorTests.swift; sourceTree = "<group>"; };
+		D2BF64FE235267BB00A85E70 /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		D2BF6500235267DA00A85E70 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		D2BF6502235268F700A85E70 /* HomeCoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
 		E694A8BEFDAC60B86DE785FD /* libPods-FishUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FishUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05FDE6317572D94FD1961DC /* Pods-FishUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishUITests.release.xcconfig"; path = "Target Support Files/Pods-FishUITests/Pods-FishUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +152,8 @@
 		D20CD565234A810E001CC9B5 /* Fish */ = {
 			isa = PBXGroup;
 			children = (
+				D2BF64DC235030BA00A85E70 /* Application */,
+				D2BF64DF2350343F00A85E70 /* Factories */,
 				D20CD566234A810E001CC9B5 /* AppDelegate.swift */,
 				D20CD568234A810E001CC9B5 /* SceneDelegate.swift */,
 				D20CD56A234A810E001CC9B5 /* ViewController.swift */,
@@ -153,6 +167,7 @@
 		D20CD57C234A8111001CC9B5 /* FishTests */ = {
 			isa = PBXGroup;
 			children = (
+				D2BF64FA2352644E00A85E70 /* Application */,
 				D20CD57D234A8111001CC9B5 /* FishTests.swift */,
 				D20CD57F234A8111001CC9B5 /* Info.plist */,
 			);
@@ -166,6 +181,49 @@
 				D20CD58A234A8111001CC9B5 /* Info.plist */,
 			);
 			path = FishUITests;
+			sourceTree = "<group>";
+		};
+		D2BF64DC235030BA00A85E70 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D2BF65042352824400A85E70 /* Flows */,
+				D2BF64DD235030D400A85E70 /* ApplicationCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D2BF64DF2350343F00A85E70 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D2BF64E22350349500A85E70 /* CoordinatorFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		D2BF64FA2352644E00A85E70 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D2BF64FB2352646400A85E70 /* ApplicationCoordinatorTests.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D2BF64FD2352677200A85E70 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D2BF6500235267DA00A85E70 /* HomeCoordinator.swift */,
+				D2BF6502235268F700A85E70 /* HomeCoordinatorFactoryProtocol.swift */,
+				D2BF64FE235267BB00A85E70 /* HomeCoordinatorProtocol.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D2BF65042352824400A85E70 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				D2BF64FD2352677200A85E70 /* Home */,
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,7 +452,12 @@
 			files = (
 				D20CD56B234A810E001CC9B5 /* ViewController.swift in Sources */,
 				D20CD567234A810E001CC9B5 /* AppDelegate.swift in Sources */,
+				D2BF64FF235267BB00A85E70 /* HomeCoordinatorProtocol.swift in Sources */,
+				D2BF6503235268F700A85E70 /* HomeCoordinatorFactoryProtocol.swift in Sources */,
+				D2BF64E32350349500A85E70 /* CoordinatorFactory.swift in Sources */,
 				D20CD569234A810E001CC9B5 /* SceneDelegate.swift in Sources */,
+				D2BF64DE235030D400A85E70 /* ApplicationCoordinator.swift in Sources */,
+				D2BF6501235267DA00A85E70 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20CD57E234A8111001CC9B5 /* FishTests.swift in Sources */,
+				D2BF64FC2352646400A85E70 /* ApplicationCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

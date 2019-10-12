@@ -1,8 +1,13 @@
+import Common
 import UIKit
 
 @available(iOS 13.0, *)
 final class SceneDelegate: UIResponder {
     // MARK: - Properties
+    private lazy var applicationCoordinator = ApplicationCoordinator(
+        screenPresenter: ScreenPresenter(rootScreen: window!),
+        coordinatorFactory: CoordinatorFactory())
+
     var window: UIWindow?
 }
 
@@ -13,7 +18,8 @@ extension SceneDelegate: UIWindowSceneDelegate {
         guard let scene = scene as? UIWindowScene else { return }
 
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = ViewController()
+
+        applicationCoordinator.start()
         window?.makeKeyAndVisible()
     }
 }

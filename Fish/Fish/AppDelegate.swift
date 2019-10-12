@@ -1,8 +1,14 @@
+import Common
+
 import UIKit
 
 @UIApplicationMain
 final class AppDelegate: UIResponder {
     lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
+
+    lazy var applicationCoordinator = ApplicationCoordinator(
+        screenPresenter: ScreenPresenter(rootScreen: window!),
+        coordinatorFactory: CoordinatorFactory())
 }
 
 // MARK: - UIApplicationDelegate extension
@@ -32,7 +38,7 @@ extension AppDelegate: UIApplicationDelegate {
 private extension AppDelegate {
     @available(iOS, obsoleted: 13)
     func legacyStart() {
-        window?.rootViewController = ViewController()
+        applicationCoordinator.start()
         window?.makeKeyAndVisible()
     }
 }
