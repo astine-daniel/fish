@@ -35,6 +35,12 @@
 		D2DCD9B12352D4C500A84F78 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9AE2352D4C500A84F78 /* Strings.swift */; };
 		D2DCD9B32352D5C000A84F78 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9B22352D5C000A84F78 /* Assets.swift */; };
 		D2DCD9B72352D79C00A84F78 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9B62352D79C00A84F78 /* TabBarController.swift */; };
+		D2DCD9B92352D8CA00A84F78 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9B82352D8CA00A84F78 /* NavigationController.swift */; };
+		D2DCD9BC23537C6F00A84F78 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9BB23537C6F00A84F78 /* Reusable.swift */; };
+		D2DCD9BF23537CAF00A84F78 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9BE23537CAF00A84F78 /* UICollectionView+Reusable.swift */; };
+		D2DCD9C323537D2A00A84F78 /* LayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9C223537D2A00A84F78 /* LayoutAnchor.swift */; };
+		D2DCD9C523537D3B00A84F78 /* LayoutDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9C423537D3B00A84F78 /* LayoutDimension.swift */; };
+		D2DCD9C723537D4F00A84F78 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9C623537D4F00A84F78 /* LayoutProxy.swift */; };
 		E2E18E7888A6972FB68EFDD7 /* libPods-FishTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6002B2730469B3B9A606C3D2 /* libPods-FishTests.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +100,12 @@
 		D2DCD9AE2352D4C500A84F78 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		D2DCD9B22352D5C000A84F78 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		D2DCD9B62352D79C00A84F78 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D2DCD9B82352D8CA00A84F78 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		D2DCD9BB23537C6F00A84F78 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		D2DCD9BE23537CAF00A84F78 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		D2DCD9C223537D2A00A84F78 /* LayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchor.swift; sourceTree = "<group>"; };
+		D2DCD9C423537D3B00A84F78 /* LayoutDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDimension.swift; sourceTree = "<group>"; };
+		D2DCD9C623537D4F00A84F78 /* LayoutProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProxy.swift; sourceTree = "<group>"; };
 		E694A8BEFDAC60B86DE785FD /* libPods-FishUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FishUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05FDE6317572D94FD1961DC /* Pods-FishUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishUITests.release.xcconfig"; path = "Target Support Files/Pods-FishUITests/Pods-FishUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,7 +192,7 @@
 				D2BF64DF2350343F00A85E70 /* Factories */,
 				D2DCD99A2352C91D00A84F78 /* Generated */,
 				D2DCD99B2352C95B00A84F78 /* Resources */,
-				D2DCD9B42352D77500A84F78 /* Shared */,
+				D2DCD9B42352D77500A84F78 /* UI */,
 				D20CD566234A810E001CC9B5 /* AppDelegate.swift */,
 				D20CD568234A810E001CC9B5 /* SceneDelegate.swift */,
 				D20CD571234A8110001CC9B5 /* LaunchScreen.storyboard */,
@@ -310,20 +322,58 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
-		D2DCD9B42352D77500A84F78 /* Shared */ = {
+		D2DCD9B42352D77500A84F78 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				D2DCD9B52352D77F00A84F78 /* UI */,
+				D2DCD9B52352D77F00A84F78 /* Controllers */,
+				D2DCD9BA23537C4D00A84F78 /* Reusable */,
+				D2DCD9C023537D0900A84F78 /* Views */,
 			);
-			path = Shared;
+			path = UI;
 			sourceTree = "<group>";
 		};
-		D2DCD9B52352D77F00A84F78 /* UI */ = {
+		D2DCD9B52352D77F00A84F78 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				D2DCD9B62352D79C00A84F78 /* TabBarController.swift */,
+				D2DCD9B82352D8CA00A84F78 /* NavigationController.swift */,
 			);
-			path = UI;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D2DCD9BA23537C4D00A84F78 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				D2DCD9BD23537C9700A84F78 /* Extensions */,
+				D2DCD9BB23537C6F00A84F78 /* Reusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		D2DCD9BD23537C9700A84F78 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2DCD9BE23537CAF00A84F78 /* UICollectionView+Reusable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D2DCD9C023537D0900A84F78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2DCD9C123537D1A00A84F78 /* Constraints */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2DCD9C123537D1A00A84F78 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				D2DCD9C223537D2A00A84F78 /* LayoutAnchor.swift */,
+				D2DCD9C423537D3B00A84F78 /* LayoutDimension.swift */,
+				D2DCD9C623537D4F00A84F78 /* LayoutProxy.swift */,
+			);
+			path = Constraints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,20 +624,26 @@
 				D2BF650B2352871500A85E70 /* InTheCityCoordinator.swift in Sources */,
 				D2BF65192352877A00A85E70 /* TripsCoordinatorProtocol.swift in Sources */,
 				D2DCD9B12352D4C500A84F78 /* Strings.swift in Sources */,
+				D2DCD9C523537D3B00A84F78 /* LayoutDimension.swift in Sources */,
 				D20CD567234A810E001CC9B5 /* AppDelegate.swift in Sources */,
 				D2BF64FF235267BB00A85E70 /* HomeCoordinatorProtocol.swift in Sources */,
+				D2DCD9BC23537C6F00A84F78 /* Reusable.swift in Sources */,
 				D2BF6503235268F700A85E70 /* HomeCoordinatorFactoryProtocol.swift in Sources */,
 				D2BF65102352875400A85E70 /* ProductsCoordinatorFactoryProtocol.swift in Sources */,
 				D2DCD9B32352D5C000A84F78 /* Assets.swift in Sources */,
 				D2BF650A2352871500A85E70 /* InTheCityCoordinatorProtocol.swift in Sources */,
 				D2DCD9B72352D79C00A84F78 /* TabBarController.swift in Sources */,
 				D2BF65172352877A00A85E70 /* TripsCoordinator.swift in Sources */,
+				D2DCD9BF23537CAF00A84F78 /* UICollectionView+Reusable.swift in Sources */,
 				D2BF64E32350349500A85E70 /* CoordinatorFactory.swift in Sources */,
 				D20CD569234A810E001CC9B5 /* SceneDelegate.swift in Sources */,
 				D2BF64DE235030D400A85E70 /* ApplicationCoordinator.swift in Sources */,
 				D2BF6501235267DA00A85E70 /* HomeCoordinator.swift in Sources */,
 				D2BF65112352875400A85E70 /* ProductsCoordinator.swift in Sources */,
+				D2DCD9C323537D2A00A84F78 /* LayoutAnchor.swift in Sources */,
+				D2DCD9B92352D8CA00A84F78 /* NavigationController.swift in Sources */,
 				D2BF65122352875400A85E70 /* ProductsCoordinatorProtocol.swift in Sources */,
+				D2DCD9C723537D4F00A84F78 /* LayoutProxy.swift in Sources */,
 				D2BF65092352871500A85E70 /* InTheCityCoordinatorFactoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

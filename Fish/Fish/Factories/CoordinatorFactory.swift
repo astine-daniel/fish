@@ -3,7 +3,7 @@ import UIKit
 
 final class CoordinatorFactory {
     func makeNavigationPresenter() -> NavigationPresenterProtocol {
-        NavigationControllerPresenter(navigationScreen: UINavigationController())
+        NavigationControllerPresenter(navigationScreen: NavigationController())
     }
 
     func makeTabPresenter() -> TabPresenterProtocol {
