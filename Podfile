@@ -1,4 +1,4 @@
-source 'https://github.com/CocoaPods/Specs'
+source 'https://cdn.cocoapods.org/'
 
 install! 'cocoapods',
          :generate_multiple_pod_projects => true,
@@ -16,6 +16,9 @@ abstract_target 'default' do
 
   # Lint
   pod 'SwiftLint'
+
+  # Utils
+  pod 'SwiftGen'
 
   target 'Fish' do
     target 'FishTests' do

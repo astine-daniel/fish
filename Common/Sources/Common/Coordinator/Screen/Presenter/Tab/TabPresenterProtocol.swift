@@ -15,5 +15,8 @@ public struct TabItem<Icon> {
 public protocol TabPresenterProtocol: ScreenPresenterProtocol {
     typealias Completion = () -> Void
 
+    var shoulSelectTabAtIndex: ((Int) -> Bool)? { get set }
+    var didSelectTabAtIndex: ((Int) -> Void)? { get set }
+
     func show<T>(tabs modules: [Module], items: [TabItem<T>], animated: Bool)
 }

@@ -79,6 +79,50 @@ final class TabBarControllerPresenterTests: XCTestCase {
         test_should_show_tabs(tabs, items: items, animated: false)
         XCTAssertFalse(tabScreen.didAnimatePresentation)
     }
+
+    func test_should_ask_if_can_show_module() throws {
+        var indexThatWillBeSelected = -1
+
+        sut.shoulSelectTabAtIndex = { index in
+            indexThatWillBeSelected = index
+            return false
+        }
+
+        let controllerWillBeSelectd = UIViewController()
+        let tabs = [UIViewController(), UIViewController(), controllerWillBeSelectd]
+        let items = (0 ..< 3).map {
+            TabItem<UIImage>(title: "Module #\($0)", icon: nil, selectedIcon: nil)
+        }
+
+        sut.show(tabs: tabs, items: items, animated: false)
+
+        let shouldSelect = try XCTUnwrap(
+            tabScreen.delegate?.tabBarController?(tabScreen, shouldSelect: controllerWillBeSelectd)
+        )
+
+        XCTAssertEqual(indexThatWillBeSelected, 2)
+        XCTAssertFalse(shouldSelect)
+    }
+
+    func test_should_notify_that_tab_was_selected() {
+        var selectedIndex = -1
+
+        sut.didSelectTabAtIndex = { index in
+            selectedIndex = index
+        }
+
+        let selectedController = UIViewController()
+        let tabs = [UIViewController(), selectedController, UIViewController()]
+        let items = (0 ..< 3).map {
+            TabItem<UIImage>(title: "Module #\($0)", icon: nil, selectedIcon: nil)
+        }
+
+        sut.show(tabs: tabs, items: items, animated: false)
+
+        tabScreen.delegate?.tabBarController?(tabScreen, didSelect: selectedController)
+
+        XCTAssertEqual(selectedIndex, 1)
+    }
 }
 
 // MARK: - Private extension

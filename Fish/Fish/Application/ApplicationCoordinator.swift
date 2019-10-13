@@ -13,6 +13,8 @@ final class ApplicationCoordinator: Coordinator {
          coordinatorFactory: CoordinatorFactory) {
         self.screenPresenter = screenPresenter
         self.coordinatorFactory = coordinatorFactory
+
+        super.init()
     }
 
     // MARK: - Methods
