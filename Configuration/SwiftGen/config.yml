@@ -1,0 +1,19 @@
+input_dir: ../../Fish/Fish/Resources/
+output_dir: ../../Fish/Fish/Generated/
+
+strings:
+  inputs: Strings/Base.lproj/Localizable.strings
+  outputs:
+    - templatePath: Templates/structured-swift.stencil
+      output: Strings.swift
+      params:
+        enumName: Strings
+
+xcassets:
+  inputs:
+    - Assets.xcassets
+  outputs:
+    - templatePath: Templates/xcassets-swift.stencil
+      output: Assets.swift
+      params:
+        enumName: Assets

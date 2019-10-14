@@ -1,0 +1,26 @@
+PODS:
+  - Kingfisher (5.8.3):
+    - Kingfisher/Core (= 5.8.3)
+  - Kingfisher/Core (5.8.3)
+  - SwiftGen (6.1.0)
+  - SwiftLint (0.35.0)
+
+DEPENDENCIES:
+  - Kingfisher
+  - SwiftGen
+  - SwiftLint
+
+SPEC REPOS:
+  https://cdn.cocoapods.org/:
+    - Kingfisher
+    - SwiftGen
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Kingfisher: b7e4cb65ff24c264bd2a1284b75b974d907afd94
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+
+PODFILE CHECKSUM: 959d9cc40e21cceac09d4e2cff1b75a6de5e2d23
+
+COCOAPODS: 1.8.3
