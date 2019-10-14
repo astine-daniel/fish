@@ -16,6 +16,9 @@
 		D20CD57E234A8111001CC9B5 /* FishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD57D234A8111001CC9B5 /* FishTests.swift */; };
 		D20CD589234A8111001CC9B5 /* FishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD588234A8111001CC9B5 /* FishUITests.swift */; };
 		D2A52245234ABF8000109D9D /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = D2A52244234ABF8000109D9D /* Common */; };
+		D2B8198E2353EC7000059F77 /* OfferListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8198D2353EC7000059F77 /* OfferListViewController.swift */; };
+		D2B819912353ECB500059F77 /* OfferListLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819902353ECB500059F77 /* OfferListLayoutDelegate.swift */; };
+		D2B819932354024800059F77 /* TitleBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819922354024800059F77 /* TitleBarButton.swift */; };
 		D2BF64DE235030D400A85E70 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF64DD235030D400A85E70 /* ApplicationCoordinator.swift */; };
 		D2BF64E32350349500A85E70 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF64E22350349500A85E70 /* CoordinatorFactory.swift */; };
 		D2BF64FC2352646400A85E70 /* ApplicationCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF64FB2352646400A85E70 /* ApplicationCoordinatorTests.swift */; };
@@ -41,6 +44,9 @@
 		D2DCD9C323537D2A00A84F78 /* LayoutAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9C223537D2A00A84F78 /* LayoutAnchor.swift */; };
 		D2DCD9C523537D3B00A84F78 /* LayoutDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9C423537D3B00A84F78 /* LayoutDimension.swift */; };
 		D2DCD9C723537D4F00A84F78 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9C623537D4F00A84F78 /* LayoutProxy.swift */; };
+		D2DCD9CA23537E9000A84F78 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9C923537E9000A84F78 /* OfferCollectionViewCell.swift */; };
+		D2DCD9D12353E5DD00A84F78 /* OfferListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9D02353E5DD00A84F78 /* OfferListView.swift */; };
+		D2DCD9D42353EA6C00A84F78 /* OfferListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCD9D32353EA6C00A84F78 /* OfferListViewProtocol.swift */; };
 		E2E18E7888A6972FB68EFDD7 /* libPods-FishTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6002B2730469B3B9A606C3D2 /* libPods-FishTests.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +87,9 @@
 		D20CD584234A8111001CC9B5 /* FishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20CD588234A8111001CC9B5 /* FishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishUITests.swift; sourceTree = "<group>"; };
 		D20CD58A234A8111001CC9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2B8198D2353EC7000059F77 /* OfferListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListViewController.swift; sourceTree = "<group>"; };
+		D2B819902353ECB500059F77 /* OfferListLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListLayoutDelegate.swift; sourceTree = "<group>"; };
+		D2B819922354024800059F77 /* TitleBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarButton.swift; sourceTree = "<group>"; };
 		D2BF64DD235030D400A85E70 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		D2BF64E22350349500A85E70 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		D2BF64FB2352646400A85E70 /* ApplicationCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -106,6 +115,9 @@
 		D2DCD9C223537D2A00A84F78 /* LayoutAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutAnchor.swift; sourceTree = "<group>"; };
 		D2DCD9C423537D3B00A84F78 /* LayoutDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutDimension.swift; sourceTree = "<group>"; };
 		D2DCD9C623537D4F00A84F78 /* LayoutProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProxy.swift; sourceTree = "<group>"; };
+		D2DCD9C923537E9000A84F78 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2DCD9D02353E5DD00A84F78 /* OfferListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListView.swift; sourceTree = "<group>"; };
+		D2DCD9D32353EA6C00A84F78 /* OfferListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListViewProtocol.swift; sourceTree = "<group>"; };
 		E694A8BEFDAC60B86DE785FD /* libPods-FishUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FishUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05FDE6317572D94FD1961DC /* Pods-FishUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FishUITests.release.xcconfig"; path = "Target Support Files/Pods-FishUITests/Pods-FishUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,10 +232,36 @@
 			path = FishUITests;
 			sourceTree = "<group>";
 		};
+		D2B8198B2353EC4D00059F77 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2B8198C2353EC5500059F77 /* Offer */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D2B8198C2353EC5500059F77 /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				D2B8198F2353EC9600059F77 /* Layout */,
+				D2B8198D2353EC7000059F77 /* OfferListViewController.swift */,
+			);
+			path = Offer;
+			sourceTree = "<group>";
+		};
+		D2B8198F2353EC9600059F77 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				D2B819902353ECB500059F77 /* OfferListLayoutDelegate.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		D2BF64DC235030BA00A85E70 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				D2BF65042352824400A85E70 /* Flows */,
+				D2DCD9CC2353E59F00A84F78 /* Shared */,
 				D2BF64DD235030D400A85E70 /* ApplicationCoordinator.swift */,
 			);
 			path = Application;
@@ -374,6 +412,50 @@
 				D2DCD9C623537D4F00A84F78 /* LayoutProxy.swift */,
 			);
 			path = Constraints;
+			sourceTree = "<group>";
+		};
+		D2DCD9CC2353E59F00A84F78 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D2DCD9CD2353E5A900A84F78 /* UI */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D2DCD9CD2353E5A900A84F78 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D2B8198B2353EC4D00059F77 /* Controllers */,
+				D2DCD9CE2353E5B300A84F78 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D2DCD9CE2353E5B300A84F78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2DCD9D22353EA5B00A84F78 /* Offer */,
+				D2B819922354024800059F77 /* TitleBarButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2DCD9CF2353E5BA00A84F78 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D2DCD9C923537E9000A84F78 /* OfferCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D2DCD9D22353EA5B00A84F78 /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				D2DCD9CF2353E5BA00A84F78 /* Cells */,
+				D2DCD9D02353E5DD00A84F78 /* OfferListView.swift */,
+				D2DCD9D32353EA6C00A84F78 /* OfferListViewProtocol.swift */,
+			);
+			path = Offer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -625,6 +707,10 @@
 				D2BF65192352877A00A85E70 /* TripsCoordinatorProtocol.swift in Sources */,
 				D2DCD9B12352D4C500A84F78 /* Strings.swift in Sources */,
 				D2DCD9C523537D3B00A84F78 /* LayoutDimension.swift in Sources */,
+				D2B819912353ECB500059F77 /* OfferListLayoutDelegate.swift in Sources */,
+				D2DCD9D42353EA6C00A84F78 /* OfferListViewProtocol.swift in Sources */,
+				D2DCD9D12353E5DD00A84F78 /* OfferListView.swift in Sources */,
+				D2B819932354024800059F77 /* TitleBarButton.swift in Sources */,
 				D20CD567234A810E001CC9B5 /* AppDelegate.swift in Sources */,
 				D2BF64FF235267BB00A85E70 /* HomeCoordinatorProtocol.swift in Sources */,
 				D2DCD9BC23537C6F00A84F78 /* Reusable.swift in Sources */,
@@ -633,12 +719,14 @@
 				D2DCD9B32352D5C000A84F78 /* Assets.swift in Sources */,
 				D2BF650A2352871500A85E70 /* InTheCityCoordinatorProtocol.swift in Sources */,
 				D2DCD9B72352D79C00A84F78 /* TabBarController.swift in Sources */,
+				D2DCD9CA23537E9000A84F78 /* OfferCollectionViewCell.swift in Sources */,
 				D2BF65172352877A00A85E70 /* TripsCoordinator.swift in Sources */,
 				D2DCD9BF23537CAF00A84F78 /* UICollectionView+Reusable.swift in Sources */,
 				D2BF64E32350349500A85E70 /* CoordinatorFactory.swift in Sources */,
 				D20CD569234A810E001CC9B5 /* SceneDelegate.swift in Sources */,
 				D2BF64DE235030D400A85E70 /* ApplicationCoordinator.swift in Sources */,
 				D2BF6501235267DA00A85E70 /* HomeCoordinator.swift in Sources */,
+				D2B8198E2353EC7000059F77 /* OfferListViewController.swift in Sources */,
 				D2BF65112352875400A85E70 /* ProductsCoordinator.swift in Sources */,
 				D2DCD9C323537D2A00A84F78 /* LayoutAnchor.swift in Sources */,
 				D2DCD9B92352D8CA00A84F78 /* NavigationController.swift in Sources */,

@@ -1,3 +1,10 @@
+// MARK: - Common
+"common.top" = "Top";
+"common.fromPrice" = "A partir de";
+
+// MARK: - Errors
+"error.fatal.notImplemented" = "%@ has not been implemented";
+
 // MARK: - Flows
 "inTheCity" = "Na cidade";
 "trips" = "Viagens";

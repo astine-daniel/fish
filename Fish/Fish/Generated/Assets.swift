@@ -43,8 +43,17 @@ internal struct ColorAsset {
 internal enum Assets {
   internal enum Colors {
     internal static let denim = ColorAsset(name: "Denim")
+    internal static let dustyGray = ColorAsset(name: "Dusty Gray")
     internal static let flamingo = ColorAsset(name: "Flamingo")
     internal static let wildSand = ColorAsset(name: "Wild Sand")
+  }
+  internal enum Common {
+    internal static let arrowDown = ImageAsset(name: "ArrowDown")
+    internal static let filter = ImageAsset(name: "Filter")
+    internal static let heart = ImageAsset(name: "Heart")
+    internal static let heartBold = ImageAsset(name: "HeartBold")
+    internal static let heartHighlighted = ImageAsset(name: "HeartHighlighted")
+    internal static let star = ImageAsset(name: "Star")
   }
   internal enum Flows {
     internal enum InTheCity {
@@ -64,10 +73,17 @@ internal enum Assets {
   // swiftlint:disable trailing_comma
   internal static let allColors: [ColorAsset] = [
     Colors.denim,
+    Colors.dustyGray,
     Colors.flamingo,
     Colors.wildSand,
   ]
   internal static let allImages: [ImageAsset] = [
+    Common.arrowDown,
+    Common.filter,
+    Common.heart,
+    Common.heartBold,
+    Common.heartHighlighted,
+    Common.star,
     Flows.InTheCity.inTheCityIcon,
     Flows.InTheCity.inTheCityIconHighlighted,
     Flows.Products.productsIcon,

@@ -16,6 +16,22 @@ internal enum Strings {
   internal static let products = Strings.tr("Localizable", "products")
   /// Viagens
   internal static let trips = Strings.tr("Localizable", "trips")
+
+  internal enum Common {
+    /// A partir de
+    internal static let fromPrice = Strings.tr("Localizable", "common.fromPrice")
+    /// Top
+    internal static let top = Strings.tr("Localizable", "common.top")
+  }
+
+  internal enum Error {
+    internal enum Fatal {
+      /// %@ has not been implemented
+      internal static func notImplemented(_ p1: String) -> String {
+        return Strings.tr("Localizable", "error.fatal.notImplemented", p1)
+      }
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

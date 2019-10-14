@@ -18,8 +18,8 @@ final class ProductsCoordinator: Coordinator {
         guard started == false else { return }
         started.toggle()
 
-        let controller = UIViewController(nibName: nil, bundle: nil)
-        controller.view.backgroundColor = .white
+        let controller = OfferListViewController(view: OfferListView())
+        controller.title = Strings.products
 
         navigationPresenter.setRoot(controller, animated: false)
     }

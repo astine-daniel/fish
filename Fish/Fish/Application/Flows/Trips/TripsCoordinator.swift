@@ -18,8 +18,8 @@ final class TripsCoordinator: Coordinator {
         guard started == false else { return }
         started.toggle()
 
-        let controller = UIViewController(nibName: nil, bundle: nil)
-        controller.view.backgroundColor = .white
+        let controller = OfferListViewController(view: OfferListView())
+        controller.title = Strings.trips
 
         navigationPresenter.setRoot(controller, animated: false)
     }
