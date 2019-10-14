@@ -9,4 +9,12 @@ final class CoordinatorFactory {
     func makeTabPresenter() -> TabPresenterProtocol {
         TabBarControllerPresenter(tabScreen: TabBarController())
     }
+
+    func makeModuleFactory() -> ModuleFactory {
+        ModuleFactory()
+    }
+
+    func makeOffersRepository() -> OffersRepositoryProtocol {
+        OffersRepository()
+    }
 }

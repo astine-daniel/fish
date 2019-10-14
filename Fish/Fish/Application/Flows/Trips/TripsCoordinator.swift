@@ -2,13 +2,22 @@ import Common
 import UIKit
 
 final class TripsCoordinator: Coordinator {
+    typealias ModuleFactory = OfferListModuleFactoryProtocol
+
     // MARK: - Properties
     private let navigationPresenter: NavigationPresenterProtocol
+    private let offersRepository: OffersRepositoryProtocol
+    private let moduleFactory: ModuleFactory
+
     private var started: Bool = false
 
     // MARK: - Initialization
-    init(navigationPresenter: NavigationPresenterProtocol) {
+    init(navigationPresenter: NavigationPresenterProtocol,
+         offersRepository: OffersRepositoryProtocol,
+         moduleFactory: ModuleFactory) {
         self.navigationPresenter = navigationPresenter
+        self.offersRepository = offersRepository
+        self.moduleFactory = moduleFactory
 
         super.init()
     }
@@ -18,10 +27,22 @@ final class TripsCoordinator: Coordinator {
         guard started == false else { return }
         started.toggle()
 
-        let controller = OfferListViewController(view: OfferListView())
-        controller.title = Strings.trips
+        let presentable = moduleFactory.makeOfferListView()
+        presentable.title = Strings.trips
 
-        navigationPresenter.setRoot(controller, animated: false)
+        navigationPresenter.setRoot(presentable, animated: false)
+
+        presentable.showLoading()
+        offersRepository.fetchTrips { result in
+            presentable.hideLoading()
+
+            switch result {
+            case let .success(offers):
+                presentable.show(offers: offers)
+            case let .failure(error):
+                print("Error while trying to fetch trips: \(error)")
+            }
+        }
     }
 }
 

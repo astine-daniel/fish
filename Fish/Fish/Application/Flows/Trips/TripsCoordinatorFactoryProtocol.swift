@@ -5,6 +5,8 @@ protocol TripsCoordinatorFactoryProtocol {
 // MARK: - CoordinatorFactory extension
 extension CoordinatorFactory: TripsCoordinatorFactoryProtocol {
     func makeTripsCoordinator() -> TripsCoordinatorProtocol {
-        TripsCoordinator(navigationPresenter: makeNavigationPresenter())
+        TripsCoordinator(navigationPresenter: makeNavigationPresenter(),
+                         offersRepository: makeOffersRepository(),
+                         moduleFactory: makeModuleFactory())
     }
 }

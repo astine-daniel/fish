@@ -24,7 +24,9 @@ public extension Resource {
         }
 
         components.path = path(with: components.path, version: version, endpointPath: endpoint.path)
-        components.queryItems = endpoint.queryItems
+        if endpoint.queryItems.isEmpty == false {
+            components.queryItems = endpoint.queryItems
+        }
 
         return try components.asURL()
     }

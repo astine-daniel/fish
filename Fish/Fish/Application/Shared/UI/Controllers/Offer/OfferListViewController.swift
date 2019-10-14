@@ -9,6 +9,11 @@ final class OfferListViewController: UIViewController {
     // swiftlint:disable:next weak_delegate
     private let layoutDelegate = OfferListLayoutDelegate()
     private let titleBarButton = TitleBarButton()
+    private var offers: [Model.Offer] = [] {
+        didSet {
+            _view.collectionView.reloadData()
+        }
+    }
 
     override var title: String? {
         didSet {
@@ -41,16 +46,32 @@ final class OfferListViewController: UIViewController {
         handleTitleBarButton()
         showRightBarButtons()
     }
+
+    // MARK: - Methods
+    func showLoading() {
+        _view.startLoadingIndicator()
+    }
+
+    func hideLoading() {
+        _view.stopLoadingIndicator()
+    }
+
+    func show(offers: [Model.Offer]) {
+        self.offers = offers
+    }
 }
 
 // MARK: - UICollectionViewDataSource extension
 extension OfferListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        offers.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        collectionView.dequeueReusableCell(for: indexPath) as OfferCollectionViewCell
+        let cell: OfferCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.setup(with: offers[indexPath.row])
+
+        return cell
     }
 }
 

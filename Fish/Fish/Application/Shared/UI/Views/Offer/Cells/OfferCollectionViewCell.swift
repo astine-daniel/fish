@@ -34,11 +34,21 @@ final class OfferCollectionViewCell: UICollectionViewCell {
         priceLabel.attributedText = nil
     }
 
+    // MARK: - Methods
+    func setup(with offer: Model.Offer) {
+        imageView.load(url: offer.imageURL)
+
+        shortTitleLabel.isHidden = offer.shortTitle == nil
+        shortTitleLabel.text = offer.shortTitle
+
+        titleLabel.text = offer.title
+        priceLabel.attributedText = priceText(from: offer.salePrice)
+    }
+
     // MARK: - Properties
-    private let imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.backgroundColor = .lightGray
-        imageView.contentMode = .center
+    private let imageView: ImageView = {
+        let imageView = ImageView()
+        imageView.backgroundColor = .white
 
         return imageView
     }()
@@ -135,6 +145,27 @@ extension OfferCollectionViewCell: Reusable { }
 
 // MARK: - Private extension
 private extension OfferCollectionViewCell {
+    // MARK: - Helper
+    func priceText(from value: Decimal) -> NSAttributedString {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.currencySymbol = ""
+        numberFormatter.groupingSeparator = "."
+        numberFormatter.currencyDecimalSeparator = ","
+        numberFormatter.numberStyle = .currency
+
+        let formattedValue = numberFormatter.string(from: NSDecimalNumber(decimal: value)) ?? "-"
+
+        let attributedString = NSMutableAttributedString()
+        attributedString.append(
+            .init(string: "R$", attributes: [.font: UIFont.systemFont(ofSize: 10.0, weight: .light)])
+        )
+        attributedString.append(
+            .init(string: formattedValue, attributes: [.font: UIFont.systemFont(ofSize: 12.0, weight: .semibold)])
+        )
+
+        return attributedString
+    }
+
     // MARK: - Setup
     func setup() {
         backgroundColor = .white
@@ -168,6 +199,12 @@ private extension OfferCollectionViewCell {
         setupFavoriteConstraints()
         setupTitleLabelConstraints()
         setupPricesConstraints()
+
+        titleLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+
+        priceLabel.setContentHuggingPriority(.required, for: .horizontal)
+        priceLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
     }
 
     // MARK: - Constraints
@@ -182,7 +219,7 @@ private extension OfferCollectionViewCell {
 
     func setupShortTitleContainerStackViewConstraints() {
         shortTitleContainerStackView.layout {
-            $0.trailing >= favoriteContainerView.leadingAnchor - 16.0
+            $0.trailing <= favoriteContainerView.leadingAnchor - 16.0
             $0.bottom == imageView.bottomAnchor - 18.0
             $0.leading == imageView.leadingAnchor + 16.0
         }
@@ -212,8 +249,7 @@ private extension OfferCollectionViewCell {
     func setupTitleLabelConstraints() {
         titleLabel.layout {
             $0.top == imageView.bottomAnchor + 16.0
-            $0.trailing <= fromPriceLabel.leadingAnchor - 16.0
-            $0.trailing <= priceLabel.leadingAnchor - 16.0
+            $0.trailing == priceLabel.leadingAnchor - 20.0
             $0.bottom >= contentView.bottomAnchor - 16.0
             $0.leading == contentView.leadingAnchor + 16.0
         }

@@ -5,6 +5,8 @@ protocol InTheCityCoordinatorFactoryProtocol {
 // MARK: - CoordinatorFactory extension
 extension CoordinatorFactory: InTheCityCoordinatorFactoryProtocol {
     func makeInTheCityCoordinator() -> InTheCityCoordinatorProtocol {
-        InTheCityCoordinator(navigationPresenter: makeNavigationPresenter())
+        InTheCityCoordinator(navigationPresenter: makeNavigationPresenter(),
+                             offersRepository: makeOffersRepository(),
+                             moduleFactory: makeModuleFactory())
     }
 }

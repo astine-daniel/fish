@@ -5,6 +5,8 @@ protocol ProductsCoordinatorFactoryProtocol {
 // MARK: - CoordinatorFactory extension
 extension CoordinatorFactory: ProductsCoordinatorFactoryProtocol {
     func makeProductsCoordinator() -> ProductsCoordinatorProtocol {
-        ProductsCoordinator(navigationPresenter: makeNavigationPresenter())
+        ProductsCoordinator(navigationPresenter: makeNavigationPresenter(),
+                            offersRepository: makeOffersRepository(),
+                            moduleFactory: makeModuleFactory())
     }
 }

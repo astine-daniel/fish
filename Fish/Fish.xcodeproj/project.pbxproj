@@ -15,10 +15,25 @@
 		D20CD573234A8110001CC9B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20CD571234A8110001CC9B5 /* LaunchScreen.storyboard */; };
 		D20CD57E234A8111001CC9B5 /* FishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD57D234A8111001CC9B5 /* FishTests.swift */; };
 		D20CD589234A8111001CC9B5 /* FishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20CD588234A8111001CC9B5 /* FishUITests.swift */; };
+		D229382F23541D7500B8A1C4 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D229382E23541D7500B8A1C4 /* ImageView.swift */; };
 		D2A52245234ABF8000109D9D /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = D2A52244234ABF8000109D9D /* Common */; };
 		D2B8198E2353EC7000059F77 /* OfferListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8198D2353EC7000059F77 /* OfferListViewController.swift */; };
 		D2B819912353ECB500059F77 /* OfferListLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819902353ECB500059F77 /* OfferListLayoutDelegate.swift */; };
 		D2B819932354024800059F77 /* TitleBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819922354024800059F77 /* TitleBarButton.swift */; };
+		D2B819B92354198300059F77 /* APIServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8199F23540CCD00059F77 /* APIServiceInfo.swift */; };
+		D2B819BA2354198700059F77 /* APIServiceInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B8199D23540CA000059F77 /* APIServiceInfoProtocol.swift */; };
+		D2B819BB2354198E00059F77 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819A323540D9400059F77 /* ResponseModel.swift */; };
+		D2B819BC2354199200059F77 /* ResponseModel.Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819A5235411B800059F77 /* ResponseModel.Deal.swift */; };
+		D2B819BD2354199800059F77 /* OffersAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819A92354134800059F77 /* OffersAPIService.swift */; };
+		D2B819BE2354199C00059F77 /* OffersAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819AB2354135500059F77 /* OffersAPIServiceProtocol.swift */; };
+		D2B819BF2354199F00059F77 /* OffersResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819AD2354136B00059F77 /* OffersResource.swift */; };
+		D2B819C0235419A600059F77 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819B0235415F800059F77 /* Model.swift */; };
+		D2B819C1235419A900059F77 /* Model.Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819B22354160500059F77 /* Model.Offer.swift */; };
+		D2B819C2235419AF00059F77 /* OffersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819B7235416E200059F77 /* OffersRepository.swift */; };
+		D2B819C3235419B300059F77 /* OffersRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819B5235416A600059F77 /* OffersRepositoryProtocol.swift */; };
+		D2B819C5235419F600059F77 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819C4235419F600059F77 /* ModuleFactory.swift */; };
+		D2B819C923541A8500059F77 /* OfferListViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819C823541A8500059F77 /* OfferListViewPresentable.swift */; };
+		D2B819CB23541AFE00059F77 /* OfferListModuleFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B819CA23541AFE00059F77 /* OfferListModuleFactoryProtocol.swift */; };
 		D2BF64DE235030D400A85E70 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF64DD235030D400A85E70 /* ApplicationCoordinator.swift */; };
 		D2BF64E32350349500A85E70 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF64E22350349500A85E70 /* CoordinatorFactory.swift */; };
 		D2BF64FC2352646400A85E70 /* ApplicationCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF64FB2352646400A85E70 /* ApplicationCoordinatorTests.swift */; };
@@ -87,9 +102,24 @@
 		D20CD584234A8111001CC9B5 /* FishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20CD588234A8111001CC9B5 /* FishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishUITests.swift; sourceTree = "<group>"; };
 		D20CD58A234A8111001CC9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D229382E23541D7500B8A1C4 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		D2B8198D2353EC7000059F77 /* OfferListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListViewController.swift; sourceTree = "<group>"; };
 		D2B819902353ECB500059F77 /* OfferListLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListLayoutDelegate.swift; sourceTree = "<group>"; };
 		D2B819922354024800059F77 /* TitleBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarButton.swift; sourceTree = "<group>"; };
+		D2B8199D23540CA000059F77 /* APIServiceInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceInfoProtocol.swift; sourceTree = "<group>"; };
+		D2B8199F23540CCD00059F77 /* APIServiceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceInfo.swift; sourceTree = "<group>"; };
+		D2B819A323540D9400059F77 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		D2B819A5235411B800059F77 /* ResponseModel.Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.Deal.swift; sourceTree = "<group>"; };
+		D2B819A92354134800059F77 /* OffersAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersAPIService.swift; sourceTree = "<group>"; };
+		D2B819AB2354135500059F77 /* OffersAPIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersAPIServiceProtocol.swift; sourceTree = "<group>"; };
+		D2B819AD2354136B00059F77 /* OffersResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersResource.swift; sourceTree = "<group>"; };
+		D2B819B0235415F800059F77 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D2B819B22354160500059F77 /* Model.Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.Offer.swift; sourceTree = "<group>"; };
+		D2B819B5235416A600059F77 /* OffersRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersRepositoryProtocol.swift; sourceTree = "<group>"; };
+		D2B819B7235416E200059F77 /* OffersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersRepository.swift; sourceTree = "<group>"; };
+		D2B819C4235419F600059F77 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		D2B819C823541A8500059F77 /* OfferListViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListViewPresentable.swift; sourceTree = "<group>"; };
+		D2B819CA23541AFE00059F77 /* OfferListModuleFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListModuleFactoryProtocol.swift; sourceTree = "<group>"; };
 		D2BF64DD235030D400A85E70 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		D2BF64E22350349500A85E70 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		D2BF64FB2352646400A85E70 /* ApplicationCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -201,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				D2BF64DC235030BA00A85E70 /* Application */,
+				D2B8199A23540C6500059F77 /* Core */,
 				D2BF64DF2350343F00A85E70 /* Factories */,
 				D2DCD99A2352C91D00A84F78 /* Generated */,
 				D2DCD99B2352C95B00A84F78 /* Resources */,
@@ -257,10 +288,110 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		D2B8199A23540C6500059F77 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D2B8199B23540C7200059F77 /* APIService */,
+				D2B819AF235415E200059F77 /* Models */,
+				D2B819B42354168500059F77 /* Repository */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D2B8199B23540C7200059F77 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				D2B8199C23540C7C00059F77 /* Info */,
+				D2B819A123540D5200059F77 /* Models */,
+				D2B819A72354131000059F77 /* Services */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		D2B8199C23540C7C00059F77 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				D2B8199F23540CCD00059F77 /* APIServiceInfo.swift */,
+				D2B8199D23540CA000059F77 /* APIServiceInfoProtocol.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		D2B819A123540D5200059F77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2B819A223540D5F00059F77 /* Response */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D2B819A223540D5F00059F77 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				D2B819A323540D9400059F77 /* ResponseModel.swift */,
+				D2B819A5235411B800059F77 /* ResponseModel.Deal.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		D2B819A72354131000059F77 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D2B819A82354132000059F77 /* OffersService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D2B819A82354132000059F77 /* OffersService */ = {
+			isa = PBXGroup;
+			children = (
+				D2B819A92354134800059F77 /* OffersAPIService.swift */,
+				D2B819AB2354135500059F77 /* OffersAPIServiceProtocol.swift */,
+				D2B819AD2354136B00059F77 /* OffersResource.swift */,
+			);
+			path = OffersService;
+			sourceTree = "<group>";
+		};
+		D2B819AF235415E200059F77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2B819B0235415F800059F77 /* Model.swift */,
+				D2B819B22354160500059F77 /* Model.Offer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D2B819B42354168500059F77 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D2B819B7235416E200059F77 /* OffersRepository.swift */,
+				D2B819B5235416A600059F77 /* OffersRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D2B819C623541A3700059F77 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D2B819C723541A3F00059F77 /* Offers */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D2B819C723541A3F00059F77 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				D2B819CA23541AFE00059F77 /* OfferListModuleFactoryProtocol.swift */,
+				D2B819C823541A8500059F77 /* OfferListViewPresentable.swift */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
 		D2BF64DC235030BA00A85E70 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				D2BF65042352824400A85E70 /* Flows */,
+				D2B819C623541A3700059F77 /* Modules */,
 				D2DCD9CC2353E59F00A84F78 /* Shared */,
 				D2BF64DD235030D400A85E70 /* ApplicationCoordinator.swift */,
 			);
@@ -271,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				D2BF64E22350349500A85E70 /* CoordinatorFactory.swift */,
+				D2B819C4235419F600059F77 /* ModuleFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -399,6 +531,7 @@
 		D2DCD9C023537D0900A84F78 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D229382E23541D7500B8A1C4 /* ImageView.swift */,
 				D2DCD9C123537D1A00A84F78 /* Constraints */,
 			);
 			path = Views;
@@ -708,14 +841,24 @@
 				D2DCD9B12352D4C500A84F78 /* Strings.swift in Sources */,
 				D2DCD9C523537D3B00A84F78 /* LayoutDimension.swift in Sources */,
 				D2B819912353ECB500059F77 /* OfferListLayoutDelegate.swift in Sources */,
+				D2B819C0235419A600059F77 /* Model.swift in Sources */,
+				D2B819B92354198300059F77 /* APIServiceInfo.swift in Sources */,
+				D2B819C3235419B300059F77 /* OffersRepositoryProtocol.swift in Sources */,
+				D2B819C2235419AF00059F77 /* OffersRepository.swift in Sources */,
 				D2DCD9D42353EA6C00A84F78 /* OfferListViewProtocol.swift in Sources */,
+				D2B819C923541A8500059F77 /* OfferListViewPresentable.swift in Sources */,
 				D2DCD9D12353E5DD00A84F78 /* OfferListView.swift in Sources */,
 				D2B819932354024800059F77 /* TitleBarButton.swift in Sources */,
 				D20CD567234A810E001CC9B5 /* AppDelegate.swift in Sources */,
 				D2BF64FF235267BB00A85E70 /* HomeCoordinatorProtocol.swift in Sources */,
 				D2DCD9BC23537C6F00A84F78 /* Reusable.swift in Sources */,
 				D2BF6503235268F700A85E70 /* HomeCoordinatorFactoryProtocol.swift in Sources */,
+				D2B819BB2354198E00059F77 /* ResponseModel.swift in Sources */,
 				D2BF65102352875400A85E70 /* ProductsCoordinatorFactoryProtocol.swift in Sources */,
+				D2B819CB23541AFE00059F77 /* OfferListModuleFactoryProtocol.swift in Sources */,
+				D2B819C5235419F600059F77 /* ModuleFactory.swift in Sources */,
+				D2B819BE2354199C00059F77 /* OffersAPIServiceProtocol.swift in Sources */,
+				D2B819BC2354199200059F77 /* ResponseModel.Deal.swift in Sources */,
 				D2DCD9B32352D5C000A84F78 /* Assets.swift in Sources */,
 				D2BF650A2352871500A85E70 /* InTheCityCoordinatorProtocol.swift in Sources */,
 				D2DCD9B72352D79C00A84F78 /* TabBarController.swift in Sources */,
@@ -726,13 +869,18 @@
 				D20CD569234A810E001CC9B5 /* SceneDelegate.swift in Sources */,
 				D2BF64DE235030D400A85E70 /* ApplicationCoordinator.swift in Sources */,
 				D2BF6501235267DA00A85E70 /* HomeCoordinator.swift in Sources */,
+				D2B819C1235419A900059F77 /* Model.Offer.swift in Sources */,
+				D2B819BF2354199F00059F77 /* OffersResource.swift in Sources */,
 				D2B8198E2353EC7000059F77 /* OfferListViewController.swift in Sources */,
 				D2BF65112352875400A85E70 /* ProductsCoordinator.swift in Sources */,
+				D2B819BD2354199800059F77 /* OffersAPIService.swift in Sources */,
 				D2DCD9C323537D2A00A84F78 /* LayoutAnchor.swift in Sources */,
 				D2DCD9B92352D8CA00A84F78 /* NavigationController.swift in Sources */,
+				D229382F23541D7500B8A1C4 /* ImageView.swift in Sources */,
 				D2BF65122352875400A85E70 /* ProductsCoordinatorProtocol.swift in Sources */,
 				D2DCD9C723537D4F00A84F78 /* LayoutProxy.swift in Sources */,
 				D2BF65092352871500A85E70 /* InTheCityCoordinatorFactoryProtocol.swift in Sources */,
+				D2B819BA2354198700059F77 /* APIServiceInfoProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,7 +1066,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.astine.Fish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -935,7 +1083,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.astine.Fish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

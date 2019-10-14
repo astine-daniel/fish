@@ -17,6 +17,9 @@ abstract_target 'default' do
   # Lint
   pod 'SwiftLint'
 
+  # UI
+  pod 'Kingfisher'
+
   # Utils
   pod 'SwiftGen'
 
